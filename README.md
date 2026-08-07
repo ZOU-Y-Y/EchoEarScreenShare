@@ -14,9 +14,9 @@ EchoEar 设备电脑端投屏工具：USB 连接设备，把电脑屏幕投到�
 
 | 版本 | 文件 | SHA256 |
 |------|------|--------|
-| v2.0.5 | EchoEarScreenShare_mac_v2.0.5.zip（即将发布） | - |
+| v2.0.5 | [EchoEarScreenShare_mac_v2.0.5.zip](EchoEarScreenShare_mac_v2.0.5.zip) | `a135c101d47fe17db582cd8c14545da6489c3f4d40cc3657ad7c9073d26f878d` |
 
-> Mac 版由 GitHub Actions 自动打包（.app），生成后上传本仓库并更新 SHA256。
+> Mac 版由 GitHub Actions 自动打包（.app），更新版本时重新触发工作流并替换 zip。
 
 ## 使用说明
 
