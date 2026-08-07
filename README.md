@@ -1,30 +1,42 @@
-# EchoEar 投屏工具（Windows）
+# EchoEar 投屏工具
 
 EchoEar 设备电脑端投屏工具：USB 连接设备，把电脑屏幕投到设备圆屏。
 
 ## 下载
 
+### Windows
+
 | 版本 | 文件 | SHA256 |
 |------|------|--------|
 | v2.0.5 | [EchoEarScreenShare_v2.0.5.zip](EchoEarScreenShare_v2.0.5.zip) | `d4036870e584b3786e4d5d423607069ecd3142e9cf787583cf3a778a7982357e` |
 
+### macOS
+
+| 版本 | 文件 | SHA256 |
+|------|------|--------|
+| v2.0.5 | EchoEarScreenShare_mac_v2.0.5.zip（即将发布） | - |
+
+> Mac 版由 GitHub Actions 自动打包（.app），生成后上传本仓库并更新 SHA256。
+
 ## 使用说明
 
 1. 下载 zip 后**右键解压**到任意文件夹（建议纯英文路径）
-2. 进入解压出的 `EchoEarScreenShare` 文件夹，双击 `EchoEarScreenShare.exe`
+2. 进入解压出的 `EchoEarScreenShare` 文件夹，双击 `EchoEarScreenShare.exe`（Mac 为 `.app`）
 3. 在设备上打开「迷你投屏」应用，用 USB 数据线连接电脑
 4. 点击「刷新」选择设备端口，点「连接」即可投屏
 
 ## 系统要求
 
-- Windows 10 / Windows 11（64 位）
+- Windows 10 / 11（64 位）或 macOS
 - USB 数据线（支持数据传输）
 
 ## 常见问题
 
-- **Windows 提示"已阻止"**：无签名软件的常规提示，点「更多信息」→「仍要运行」
+- **Windows 提示"已阻止"**：无签名软件常规提示，点「更多信息」→「仍要运行」
+- **Mac 提示"无法验证开发者"**：右键 → 打开（或系统设置 → 隐私与安全性 → 仍要打开）
+- **Mac 首次投屏无画面**：系统设置 → 隐私与安全性 → **屏幕录制** 勾选授权
 - **连接后无画面**：确认设备端已打开「迷你投屏」应用，USB 线支持数据传输
-- **校验文件**：`certutil -hashfile EchoEarScreenShare_v2.0.5.zip SHA256`
+- **校验文件**：`certutil -hashfile 文件名 SHA256`（Mac 用 `shasum -a 256 文件名`）
 
 ## 更新记录
 
@@ -33,3 +45,4 @@ EchoEar 设备电脑端投屏工具：USB 连接设备，把电脑屏幕投到�
   - 修复高帧率花屏（损坏帧校验 + 解码缓冲保护）
   - 帧率优化（6 → 10.5fps+）
   - 圆形模式优化（圆外涂黑 + 画质平衡）
+  - 新增 macOS 版（GitHub Actions 自动打包）
